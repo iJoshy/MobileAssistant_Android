@@ -1,0 +1,85 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/walkthrough"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background" >
+
+    <!--com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/btnLabel"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"            
+            android:text="Mobile Assistant"
+            android:layout_gravity="center_horizontal"
+            bootstrapbutton:bb_icon_right="fa-chevron-circle-right"
+            bootstrapbutton:bb_roundedCorners="true"
+            bootstrapbutton:bb_type="default"
+            android:textSize="17sp" /-->
+    
+    <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=""           
+           android:layout_weight="0.7" />
+    
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"        
+        android:layout_weight="0.9"
+        />
+    
+    <LinearLayout 
+        	android:orientation="vertical"
+        	android:layout_width="match_parent"
+		    android:layout_height="0px"
+		    android:layout_weight="0.4" >
+		
+        <TextView 
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text=""           
+           android:layout_marginTop="25dp" />
+        
+	    <com.beardedhen.androidbootstrap.BootstrapButton
+	            android:id="@+id/btnBig"
+	            android:layout_width="260dp"
+	            android:layout_height="wrap_content"
+	            android:layout_margin="10dp"
+	            android:text="subscribe"
+	            android:layout_gravity="center_horizontal"
+	            bootstrapbutton:bb_icon_right="fa-chevron-circle-right"
+	            bootstrapbutton:bb_roundedCorners="true"
+	            bootstrapbutton:bb_type="success"
+	            android:textSize="17sp"
+	            android:onClick="subscribeClicked" />
+	    
+	    <FrameLayout
+	         android:id="@+id/setupTimer"
+	         android:layout_width="130dp"
+	         android:layout_height="wrap_content"
+	         android:layout_marginTop="-110dp"
+	         android:layout_gravity="center_horizontal" >
+	
+	        <com.viewpagerindicator.CirclePageIndicator
+		        android:id="@+id/indicator"
+		        android:layout_marginTop="7dp"
+		        android:padding="10dip"
+		        android:layout_height="wrap_content"
+		        android:layout_width="fill_parent" />
+	
+	        <Button
+	            android:id="@+id/searchBtn"
+	            android:layout_marginTop="8dp"
+	            android:layout_width="20dp"
+	            android:layout_height="20dp"
+	            android:background="@drawable/home"
+	            android:onClick="homeClicked" />
+	        
+	    </FrameLayout>
+	    
+    </LinearLayout>
+</LinearLayout>

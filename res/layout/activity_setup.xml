@@ -1,0 +1,204 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setup"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/setup" >
+
+    <TextView
+        android:id="@+id/txtAsstNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:text="@string/hello_world" />
+    
+    <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/asstNo"
+            android:maxLength="11"
+            android:inputType="number"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"   
+            android:layout_gravity="center_horizontal"
+            bootstrapbutton:be_roundedCorners="true"
+            bootstrapbutton:be_state="success" />
+    
+    <TextView
+        android:id="@+id/txtAssttype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:text="@string/hello_world" />
+    
+    <FrameLayout
+         android:layout_width="280dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:layout_gravity="center_horizontal" >
+         
+		<com.beardedhen.androidbootstrap.BootstrapButton
+	         android:id="@+id/asstTypeControlled"
+	         android:layout_width="280dp"
+	         android:layout_height="wrap_content"  
+	         android:layout_marginTop="5dp"         
+	         android:text="        controlled assistant"
+	         android:layout_gravity="center_horizontal"
+	         android:drawableLeft="@drawable/unchecked"
+	         bootstrapbutton:bb_roundedCorners="true"
+	         bootstrapbutton:bb_type="default"
+	         bootstrapbutton:bb_text_gravity="left"
+	         android:textSize="17sp"
+	         android:onClick="controlledClicked" />
+		
+		<Button
+            android:id="@+id/controlBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="11dp"
+            android:background="@drawable/checked"
+            android:onClick="controlledClicked" />
+        
+    </FrameLayout>
+	
+    <FrameLayout
+         android:layout_width="280dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:layout_gravity="center_horizontal" >
+		
+		<com.beardedhen.androidbootstrap.BootstrapButton
+	            android:id="@+id/asstTypeTime"
+	            android:layout_width="280dp"
+	            android:layout_height="wrap_content"   
+	            android:layout_marginTop="5dp"        
+	            android:text="        timed assistant"
+	            android:layout_gravity="center_horizontal"
+	            android:drawableLeft="@drawable/checked"
+	            bootstrapbutton:bb_roundedCorners="true"
+	            bootstrapbutton:bb_type="default"
+	            bootstrapbutton:bb_text_gravity="left"
+	            android:textSize="17sp"
+	            android:onClick="timedClicked" />
+	     
+		<Button
+	            android:id="@+id/timedBtn"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_gravity="left|center_vertical"
+	            android:layout_marginTop="3dp"
+	            android:layout_marginLeft="11dp"
+	            android:background="@drawable/unchecked"
+	            android:onClick="timedClicked" />
+        
+    </FrameLayout>
+    
+    <FrameLayout
+         android:layout_width="280dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:layout_gravity="center_horizontal" >
+            
+	    <com.beardedhen.androidbootstrap.BootstrapButton
+	            android:id="@+id/asstTypeLive"
+	            android:layout_width="280dp"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="5dp"            
+	            android:text="        live assistant"            
+	            android:layout_gravity="center_horizontal"
+	            android:drawableLeft="@drawable/checked"
+	            bootstrapbutton:bb_roundedCorners="true"
+	            bootstrapbutton:bb_type="default"
+	            bootstrapbutton:bb_text_gravity="left"
+	            android:textSize="17sp"
+	            android:onClick="liveClicked" />
+	    
+		<Button
+	            android:id="@+id/liveBtn"
+	            android:layout_width="30dp"
+	            android:layout_height="30dp"
+	            android:layout_gravity="left|center_vertical"
+	            android:layout_marginTop="3dp"
+	            android:layout_marginLeft="11dp"
+	            android:background="@drawable/unchecked"
+	            android:onClick="liveClicked" />
+        
+    </FrameLayout>
+    
+    <TextView
+        android:id="@+id/txtTimetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:text="@string/hello_world" />
+    
+
+    <FrameLayout
+         android:id="@+id/setupTimer"
+         android:layout_width="280dp"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="10dp"
+         android:layout_gravity="center_horizontal" >
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+	          android:id="@+id/asstTimer"
+	          android:layout_width="280dp"
+	          android:layout_height="wrap_content"
+	          android:focusable="false" 
+	          android:text="10 : seconds"
+	          bootstrapbutton:bb_text_gravity="center"
+	          bootstrapbutton:be_roundedCorners="true"
+	          bootstrapbutton:be_state="success" />
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="46dp"
+            android:layout_height="32.5dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/left"
+            android:onClick="leftClicked" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="46dp"
+            android:layout_height="32.5dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/right"
+            android:onClick="rightClicked" />
+        
+    </FrameLayout>
+    
+    
+    <TextView
+        android:id="@+id/space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" />
+    
+    <com.beardedhen.androidbootstrap.BootstrapButton        		
+            android:id="@+id/btnBig"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:layout_gravity="center_horizontal"
+            bootstrapbutton:bb_icon_right="fa-chevron-circle-right"
+            bootstrapbutton:bb_roundedCorners="true"
+            bootstrapbutton:bb_type="success"
+            android:textSize="17sp"
+            android:onClick="addClicked" />
+    
+</LinearLayout>
